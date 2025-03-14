@@ -17,19 +17,21 @@
     <meta name="keywords" content="portofolio, web developer, UI/UX, desain web">
     <meta name="author" content="Farhan Malik Ibrahim">
 </head>
-<body class="p-6 text-white">
-    <nav class="bg-gray-800 p-4 shadow-lg">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
+<nav class="bg-gray-800 p-4 shadow-lg">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="logo.png" alt="Logo" class="h-10 w-10 mr-3">
             <a href="#" class="text-xl font-bold text-white">Portofolio</a>
-            <div>
-                <a href="#about" class="text-gray-300 hover:text-white px-4">Tentang</a>
-                <a href="#projects" class="text-gray-300 hover:text-white px-4">Proyek</a>
-                <a href="#contact" class="text-gray-300 hover:text-white px-4">Kontak</a>
-            </div>
         </div>
-    </nav>
+        <div>
+            <a href="#about" class="text-gray-300 hover:text-white px-4 transition duration-300">Tentang</a>
+            <a href="#projects" class="text-gray-300 hover:text-white px-4 transition duration-300">Proyek</a>
+            <a href="#contact" class="text-gray-300 hover:text-white px-4 transition duration-300">Kontak</a>
+        </div>
+    </div>
+</nav>
     
-    <div class="max-w-4xl mx-auto bg-gray-900 shadow-lg rounded-2xl p-6 mt-6">y
+    <div class="max-w-4xl mx-auto bg-gray-900 shadow-lg rounded-2xl p-6 mt-6">
         <header class="text-center mb-6">
             <div class="bg-gray-800 p-6 rounded-lg shadow-lg inline-block">
                 <img src="ccc.jpeg" alt="Foto Profil" class="w-32 h-32 mx-auto rounded-full border-4 border-gray-700 mb-4">
@@ -43,6 +45,24 @@
             <p class="text-gray-300">
                 Saya adalah mahasiswa Teknik Informatika dengan minat dalam pengembangan web, data science, dan teknologi terbaru. Saya senang belajar hal-hal baru dan terus mengasah keterampilan saya. Dengan passion dalam desain web yang estetis dan harmonisasi warna yang menarik, saya telah menyelesaikan beberapa proyek, termasuk pembuatan web toko jersey olahraga online. Saya juga senang bekerja dalam tim dan berkontribusi secara aktif untuk mencapai tujuan bersama.
             </p>
+        </section>
+
+        <section id="skills" class="mt-8 text-center">
+            <h2 class="text-2xl font-bold mb-4">Keahlian</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <img src="images1.png" alt="HTML, CSS, JavaScript" class="h-16 w-16 mb-3">
+                    <span class="text-white font-semibold">HTML, CSS, JavaScript</span>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <img src="Image2.png" alt="Microsoft" class="h-16 w-16 mb-3">
+                    <span class="text-white font-semibold">Microsoft</span>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <img src="image3.png" alt="Canva" class="h-16 w-16 mb-3">
+                    <span class="text-white font-semibold">Canva</span>
+                </div>
+            </div>
         </section>
 
         <section id="projects" class="mb-6" x-data="{ current: 0, images: ['https://via.placeholder.com/600x300/FF6384', 'https://via.placeholder.com/600x300/36A2EB', 'https://via.placeholder.com/600x300/FFCE56'] }">
