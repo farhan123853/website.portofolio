@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Saya</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.5/cdn.min.js" defer></script>
     <style>
@@ -17,37 +19,58 @@
     <meta name="keywords" content="portofolio, web developer, UI/UX, desain web">
     <meta name="author" content="Farhan Malik Ibrahim">
 </head>
-<nav class="bg-gray-800 p-4 shadow-lg">
-    <div class="max-w-4xl mx-auto flex justify-between items-center">
-        <div class="flex items-center">
-            <img src="logo.png" alt="Logo" class="h-10 w-10 mr-3">
-            <a href="#" class="text-xl font-bold text-white">Portofolio</a>
-        </div>
-        <div>
-            <a href="#about" class="text-gray-300 hover:text-white px-4 transition duration-300">Tentang</a>
-            <a href="#projects" class="text-gray-300 hover:text-white px-4 transition duration-300">Proyek</a>
-            <a href="#contact" class="text-gray-300 hover:text-white px-4 transition duration-300">Kontak</a>
-        </div>
-    </div>
-</nav>
+
+
     
-    <div class="max-w-4xl mx-auto bg-gray-900 shadow-lg rounded-2xl p-6 mt-6">
-        <header class="text-center mb-6">
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg inline-block">
-                <img src="ccc.jpeg" alt="Foto Profil" class="w-32 h-32 mx-auto rounded-full border-4 border-gray-700 mb-4">
-                <h1 class="text-4xl font-bold text-white">Farhan Malik Ibrahim</h1>
-                <p class="text-gray-300">D4 Teknik Informatika</p>
-            </div>
-        </header>
+<div class="max-w-4xl mx-auto bg-gray-900 shadow-lg rounded-2xl p-6 mt-6 animate-fade-in">
+    <header class="text-center mb-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg inline-block animate-bounce">
+            <img src="ccc.jpeg" alt="Foto Profil" class="w-32 h-32 mx-auto rounded-full border-4 border-gray-700 mb-4 animate-zoom-in">
+            <h1 class="text-4xl font-bold text-white">Farhan Malik Ibrahim</h1>
+            <p class="text-gray-300">D4 Teknik Informatika</p>
+        </div>
+    </header>
 
-        <section id="about" class="mb-6">
-            <h2 class="text-2xl font-semibold text-white mb-4">Tentang Saya</h2>
-            <p class="text-gray-300">
-                Saya adalah mahasiswa Teknik Informatika dengan minat dalam pengembangan web, data science, dan teknologi terbaru. Saya senang belajar hal-hal baru dan terus mengasah keterampilan saya. Dengan passion dalam desain web yang estetis dan harmonisasi warna yang menarik, saya telah menyelesaikan beberapa proyek, termasuk pembuatan web toko jersey olahraga online. Saya juga senang bekerja dalam tim dan berkontribusi secara aktif untuk mencapai tujuan bersama.
-            </p>
-        </section>
+    <section id="about" class="mb-6 animate-slide-in">
+        <h2 class="text-2xl font-semibold text-white mb-4">Tentang Saya</h2>
+        <p class="text-gray-300">
+            Saya adalah mahasiswa Teknik Informatika dengan minat dalam pengembangan web, data science, dan teknologi terbaru. Saya senang belajar hal-hal baru dan terus mengasah keterampilan saya. Dengan passion dalam desain web yang estetis dan harmonisasi warna yang menarik, saya telah menyelesaikan beberapa proyek, termasuk pembuatan web toko jersey olahraga online. Saya juga senang bekerja dalam tim dan berkontribusi secara aktif untuk mencapai tujuan bersama.
+        </p>
+    </section>
+</div>
 
-        <section id="skills" class="mt-8 text-center">
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .animate-fade-in {
+        animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    .animate-bounce {
+        animation: bounce 2s infinite;
+    }
+    @keyframes zoomIn {
+        from { transform: scale(0.5); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+    .animate-zoom-in {
+        animation: zoomIn 1s ease-in-out;
+    }
+    @keyframes slideIn {
+        from { transform: translateX(-100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-in {
+        animation: slideIn 1s ease-in-out;
+    }
+</style>
+
+        <section id="skill" class="mt-8 text-center">
             <h2 class="text-2xl font-bold mb-4">Keahlian</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center">
@@ -65,18 +88,46 @@
             </div>
         </section>
 
-        <section id="projects" class="mb-6" x-data="{ current: 0, images: ['https://via.placeholder.com/600x300/FF6384', 'https://via.placeholder.com/600x300/36A2EB', 'https://via.placeholder.com/600x300/FFCE56'] }">
-            <h2 class="text-2xl font-semibold text-white mb-4">Proyek Saya</h2>
-            <div class="relative w-full h-48 overflow-hidden rounded-lg">
-                <template x-for="(image, index) in images" :key="index">
-                    <img x-show="current === index" :src="image" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500">
-                </template>
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                 <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="ss1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="ss2.png" class="absolute block w-900 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="weeb.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
             </div>
-            <div class="flex justify-center mt-4">
-                <button class="mx-2 px-3 py-1 bg-gray-700 text-white rounded-full" @click="current = (current - 1 + images.length) % images.length">&#9665;</button>
-                <button class="mx-2 px-3 py-1 bg-gray-700 text-white rounded-full" @click="current = (current + 1) % images.length">&#9655;</button>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
             </div>
-        </section>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
 
         <section id="contact">
             <h2 class="text-2xl font-semibold text-white mb-4">Kontak</h2>
